@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Form from "@components/Form";
 
 const EditPost = () => {
@@ -11,8 +11,10 @@ const EditPost = () => {
 
   const router = useRouter();
 
-  const searchParams = useSearchParams();
-  const postId = searchParams.get("id");
+  // const searchParams = useSearchParams();
+  // const postId = searchParams.get("id");
+
+  const postId = router.query.id;
 
   console.log("post id", postId);
   const { data: session } = useSession();
