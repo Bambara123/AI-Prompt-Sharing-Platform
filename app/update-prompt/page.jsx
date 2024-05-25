@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Form from "@components/Form";
 
 const EditPost = () => {
@@ -11,10 +11,8 @@ const EditPost = () => {
 
   const router = useRouter();
 
-  // const searchParams = useSearchParams();
-  // const postId = searchParams.get("id");
-
-  const postId = router.query.id;
+  const searchParams = useSearchParams();
+  const postId = searchParams.get("id");
 
   console.log("post id", postId);
   const { data: session } = useSession();
@@ -72,4 +70,23 @@ const EditPost = () => {
   );
 };
 
-export default EditPost;
+const EditPost_ = () => {
+  return (
+    <Suspense>
+      <EditPost />{" "}
+    </Suspense>
+  );
+};
+
+export default EditPost_;
+
+// this is the only new part added.
+// const EditPost_ = () => {
+//   return (
+//     <Suspense>
+//       <EditPost />{" "}
+//     </Suspense>
+//   );
+// };
+
+// export default EditPost_;
