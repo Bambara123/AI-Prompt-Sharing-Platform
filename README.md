@@ -1,5 +1,5 @@
 <div align="center">
-  <h1><b>Learn NEXT.JS</b></h1>
+  <h1><b>AI Prompt Sharing Platform Using Next.JS</b></h1>
 </div>
 
 <h4 align="center"></h4>
@@ -25,13 +25,10 @@
 ## 🚀 Introduction
 
 - This codebase is my journey into Next.js, inspired by a YouTube tutorial.
-- It served as the foundation for creating an exciting web app.
+- Users can create and share their own prompts with others.
 
 <h2 id="getting-started">🛠 Getting Started</h2>
 
-- If you are interested in learning next.js, this repo might be useful for you.
-- I have documented the codebase  with basic concepts and practices in a way that it is easy to understand for me.
-- I created this follow along with this video on Youtube.  
 - Get started by cloning the repository to your local machine:
    
 ```
